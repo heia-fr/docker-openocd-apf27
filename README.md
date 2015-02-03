@@ -8,7 +8,7 @@ Docker image with OpenOCD for APF27
 #!/bin/bash
 
 docker run -d -p 3333:3333 -p 4444:4444 --privileged \
-           --name openocd supcik/openocd
+           --name openocd heiafr/openocd-apf27
 ```
 
 ## Start the daemon with jlink interface
@@ -17,7 +17,7 @@ docker run -d -p 3333:3333 -p 4444:4444 --privileged \
 #!/bin/bash
 
 docker run -d -e INTERFACE=jlink -p 3333:3333 -p 4444:4444 --privileged \
-           --name openocd supcik/ppenocd
+           --name openocd heiafr/openocd-apf27
 ```
 
 ## Stop the daemon
